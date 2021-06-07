@@ -1,10 +1,12 @@
 import { useContext, useState } from "react";
 import { BasketContext } from "../context/BasketContext";
 import "../css/Checkout.css";
-import MessageDiolag from "./MessageDiolag";
+import emailjs from "emailjs-com";
+import { useHistory } from "react-router-dom";
 
 const Checkout = () => {
   const { basket } = useContext(BasketContext);
+  const history = useHistory();
 
   var today = new Date(),
     odate =
@@ -31,8 +33,31 @@ const Checkout = () => {
 
   const confirmorderHandler = (e) => {
     e.preventDefault();
-    //email
+    //email command => npm install emailjs-com --save
+    var templateParams = {
+      from_name: "SHOPPING STORE",
+      to_name: name,
+      delivery_date: ddate,
+      message: "Please contact us if needed.",
+      mail: email,
+    };
+    emailjs
+      .send(
+        "service_35h2emv",
+        "template_5j2fofm",
+        templateParams,
+        "user_rdI6T49GKsE4fpa8Ixy32"
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        (error) => {
+          console.log("FAILED...", error);
+        }
+      );
     //route
+    history.push("/");
   };
 
   return (
@@ -40,6 +65,7 @@ const Checkout = () => {
       <form onSubmit={confirmorderHandler} className="checkout__form">
         <h2 className="form__title">User Details</h2>
         <input
+          name="name"
           className="form__input"
           onChange={(e) => {
             setName(e.target.value);
