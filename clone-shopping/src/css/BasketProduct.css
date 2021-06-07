@@ -1,0 +1,11 @@
+.basketproduct__icon {
+  border: none;
+  color: white;
+  background-color: gray;
+  width: 50%;
+  border-radius: 10px;
+  padding-top: 5px;
+  margin-top: -8px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}

@@ -1,0 +1,41 @@
+.subtotal__title {
+  color: darkslategrey;
+}
+
+.subtotal {
+  display: flex;
+  flex-direction: column;
+  background-color: lightgray;
+  padding-left: 30px;
+  padding-right: 30px;
+  height: fit-content;
+  color: darkslategrey;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+
+.subtotal__item {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.subtotal__price {
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.subtotal__price > small {
+  padding-left: 15px;
+}
+
+.subtotal__proceed {
+  margin-top: 15px;
+  height: 30px;
+  border: none;
+  color: white;
+  background-color: gray;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}

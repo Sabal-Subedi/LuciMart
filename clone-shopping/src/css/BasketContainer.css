@@ -1,0 +1,24 @@
+.basketcontainer {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  height: fit-content;
+}
+
+.basketcontainer__left {
+  padding-left: 5%;
+  width: 500px;
+  background-color: white;
+}
+
+.basketcontainer__title {
+  color: darkslategrey;
+  font-size: 25px;
+  text-align: left;
+}
+
+.basketcontainer__right {
+  padding-left: 20%;
+  padding-right: auto;
+}
