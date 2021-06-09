@@ -5,6 +5,7 @@ export const BasketContext = new createContext();
 
 const BasketContextProvider = (props) => {
   const [basket, dispatch] = useReducer(Reducer, []);
+
   return (
     <BasketContext.Provider value={{ basket, dispatch }}>
       {props.children}

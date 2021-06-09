@@ -3,6 +3,7 @@ import { BasketContext } from "../context/BasketContext";
 import "../css/Checkout.css";
 import emailjs from "emailjs-com";
 import { useHistory } from "react-router-dom";
+import { UserContext } from "../context/UserContext";
 
 const Checkout = () => {
   const { basket } = useContext(BasketContext);
@@ -30,6 +31,7 @@ const Checkout = () => {
   const [address, setAddress] = useState("");
   const [email, setEmail] = useState("");
   const [location, setLocation] = useState("kathmandu");
+  const { user } = useContext(UserContext);
 
   const confirmorderHandler = (e) => {
     e.preventDefault();
@@ -65,7 +67,6 @@ const Checkout = () => {
       <form onSubmit={confirmorderHandler} className="checkout__form">
         <h2 className="form__title">User Details</h2>
         <input
-          name="name"
           className="form__input"
           onChange={(e) => {
             setName(e.target.value);
@@ -95,7 +96,7 @@ const Checkout = () => {
           onChange={(e) => {
             setEmail(e.target.value);
           }}
-          value={email}
+          value={user ? user.email : email}
           type="email"
           required
           placeholder="example@gmail.com"
@@ -138,9 +139,13 @@ const Checkout = () => {
         </div>
         <div className="checkout__list">
           <h2 className="list__title">List of Items</h2>
-          <ol className="item__title">
-            <li>{basket.map((b) => b.title)}</li>
-          </ol>
+          <div className="item__title">
+            <ol>
+              {basket.map((b) => (
+                <li> {b.title}</li>
+              ))}
+            </ol>
+          </div>
           <div className="list__price">
             <span className="item__price">
               Delivery Charge <small>$</small>

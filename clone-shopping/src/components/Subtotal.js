@@ -17,7 +17,7 @@ const Subtotal = () => {
           {basket?.reduce((amount, item) => item.price + amount, 0)}
         </strong>
       </span>
-      <Link to="/checkout">
+      <Link to={basket.length !== 0 && "/checkout"}>
         <button className="subtotal__proceed">Proceed to Checkout</button>
       </Link>
     </div>

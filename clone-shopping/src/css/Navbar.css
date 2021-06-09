@@ -8,21 +8,16 @@
   color: white;
 }
 
-.title__link {
+.title__link,
+.basket__link,
+.user__link {
   text-decoration: none;
   color: white;
 }
 
-.title__link:hover {
-  color: red;
-}
-
-.basket__link {
-  text-decoration: none;
-  color: white;
-}
-
-.basket__link:hover {
+.title__link:hover,
+.basket__link:hover,
+.user__link:hover {
   color: red;
 }
 

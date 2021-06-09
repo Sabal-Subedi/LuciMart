@@ -1,6 +1,7 @@
 .home {
   background-color: rgb(213, 238, 238);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
@@ -9,7 +10,11 @@
   padding-right: auto;
 }
 
-.home__row {
+.home__row1,
+.home__row2,
+.home__row3 {
+  display: flex;
+  flex-direction: row;
   flex-wrap: nowrap;
   margin-left: 5px;
   margin-right: 5px;

@@ -4,7 +4,7 @@ import Product from "./Product";
 const Home = () => {
   return (
     <div className="home">
-      <div className="home__row">
+      <div className="home__row1">
         <Product
           id={Math.random() * 10000}
           title={"Redmi note 7"}
@@ -23,8 +23,15 @@ const Home = () => {
           }
           rating={5}
         />
+        <Product
+          id={Math.random() * 10000}
+          title={"Redmi note 10 pro"}
+          price={2300}
+          image={"https://cdn.alzashop.com/ImgW.ashx?fd=f16&cd=SKXI229b3"}
+          rating={5}
+        />
       </div>
-      <div className="home__row">
+      <div className="home__row2">
         <Product
           id={Math.random() * 10000}
           title={"Redmi note 8 pro"}
@@ -51,7 +58,7 @@ const Home = () => {
           rating={5}
         />
       </div>
-      <div className="home__row">
+      <div className="home__row3">
         <Product
           id={Math.random() * 10000}
           title={"Redmi note 10"}
@@ -59,13 +66,6 @@ const Home = () => {
           image={
             "https://cdn.shopify.com/s/files/1/0231/3627/2464/products/Product-Image---600x600-02.png?v=1620326869"
           }
-          rating={5}
-        />
-        <Product
-          id={Math.random() * 10000}
-          title={"Redmi note 10 pro"}
-          price={2300}
-          image={"https://cdn.alzashop.com/ImgW.ashx?fd=f16&cd=SKXI229b3"}
           rating={5}
         />
       </div>
