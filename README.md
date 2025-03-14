@@ -29,7 +29,7 @@ Luci Store is a feature-rich shopping platform** that offers a smooth and intera
 ## 🚀 Getting Started
 
 ### 📌 Installation  
-- 1️⃣ Clone the repository [Click here](https://github.com/Sabal-Subedi/luci-store.git)
+- 1️⃣ Clone the repository [Click here](https://github.com/Sabal-Subedi/LuciMart.git)
 - 2️⃣ Navigate to the project directory
 - 3️⃣ Install dependencies
   - npm install
