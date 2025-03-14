@@ -2,7 +2,7 @@
 
 ### A Modern E-Commerce Web App for Seamless Shopping!  
 
-Luci Store is a feature-rich shopping platform** that offers a smooth and interactive user experience. Built with modern web technologies, it provides a fully responsive and user-friendly interface for browsing, searching, and purchasing products online.  
+Luci Store is a feature-rich shopping platform that offers a smooth and interactive user experience. Built with modern web technologies, it provides a fully responsive and user-friendly interface for browsing, searching, and purchasing products online.  
 
 ## 🎯 Key Features
 ✅ Product Listings & Search – Browse a variety of products with quick search functionality.  
